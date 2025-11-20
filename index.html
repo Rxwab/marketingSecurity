@@ -21,6 +21,15 @@
         .page-content { display: none; }
         /* إظهار الصفحة النشطة */
         .page-content.active { display: block; }
+        /* نمط التمرير الأفقي للفئات والمنتجات */
+        .horizontal-scroll {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none; /* For Firefox */
+        }
+        .horizontal-scroll::-webkit-scrollbar {
+            display: none; /* For Chrome, Safari, and Opera */
+        }
     </style>
 </head>
 <body class="min-h-screen">
@@ -33,7 +42,7 @@
                 <header class="p-4 flex justify-between items-center border-b border-gray-100">
                     <div class="flex items-center space-x-2 space-x-reverse">
                         <img src="https://i.ibb.co/Kp7JyFrT/Photoroom.png" alt="شعار الأكاديمية" class="h-8 rounded-full shadow-md">
-                        <span class="text-xl font-bold text-gray-800">أكاديمية أمان</span>
+                        <span class="text-2xl font-extrabold text-primary-teal">أكاديمية تسويق بأمان</span>
                     </div>
                     <button class="text-gray-500 hover:text-gray-800 p-2 rounded-full transition duration-150" onclick="navigateTo('sidebar-page')">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -44,7 +53,7 @@
 
                 <div class="p-4">
                     <div class="relative">
-                        <input type="text" placeholder="ابحث عن منتج، متجر، أو عرض..." class="w-full py-3 pr-12 pl-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-teal focus:border-primary-teal transition duration-150 text-right">
+                        <input id="searchInput" type="text" placeholder="ابحث عن منتج، متجر، أو عرض..." class="w-full py-3 pr-12 pl-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-teal focus:border-primary-teal transition duration-150 text-right">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 absolute top-1/2 left-3 transform -translate-y-1/2 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                         </svg>
@@ -64,20 +73,33 @@
                 </div>
 
                 <div class="px-4 py-4 border-t border-gray-100">
-                    <h3 class="text-lg font-semibold text-gray-700 mb-3">الصفحة الرئيسية</h3>
+                    <h3 class="text-lg font-semibold text-gray-700 mb-3">تصفح الفئات</h3>
                     <div class="grid grid-cols-4 gap-4 text-center">
+                        
                         <div class="flex flex-col items-center group cursor-pointer"><div class="w-12 h-12 bg-blue-500 bg-opacity-10 text-blue-600 rounded-xl flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition duration-200"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.205 5 7.5 5A3.5 3.5 0 004 8.5c0 .907.258 1.76.743 2.5M12 6.253C13.168 5.477 14.795 5 16.5 5A3.5 3.5 0 0120 8.5c0 .907-.258 1.76-.743 2.5M12 11.253v-5m0 5H9.25m2.75 0H15.75" /></svg></div><span class="text-xs mt-1 text-gray-600 font-medium">كتب</span></div>
+                        
                         <div class="flex flex-col items-center group cursor-pointer"><div class="w-12 h-12 bg-yellow-500 bg-opacity-10 text-yellow-600 rounded-xl flex items-center justify-center group-hover:bg-yellow-600 group-hover:text-white transition duration-200"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg></div><span class="text-xs mt-1 text-gray-600 font-medium">دورات</span></div>
+                        
                         <div class="flex flex-col items-center group cursor-pointer"><div class="w-12 h-12 bg-purple-500 bg-opacity-10 text-purple-600 rounded-xl flex items-center justify-center group-hover:bg-purple-600 group-hover:text-white transition duration-200"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 17h18M5 17V8a2 2 0 012-2h10a2 2 0 012 2v9M9 3h6" /></svg></div><span class="text-xs mt-1 text-gray-600 font-medium">رقمية</span></div>
+                        
                         <div class="flex flex-col items-center group cursor-pointer"><div class="w-12 h-12 bg-red-500 bg-opacity-10 text-red-600 rounded-xl flex items-center justify-center group-hover:bg-red-600 group-hover:text-white transition duration-200"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V7a2 2 0 012-2h14a2 2 0 012 2v3a2 2 0 01-2 2M5 12a2 2 0 00-2 2v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 00-2-2m-2-4h.01M17 16h.01" /></svg></div><span class="text-xs mt-1 text-gray-600 font-medium">إلكترونيات</span></div>
+
+                        <div class="flex flex-col items-center group cursor-pointer"><div class="w-12 h-12 bg-indigo-500 bg-opacity-10 text-indigo-600 rounded-xl flex items-center justify-center group-hover:bg-indigo-600 group-hover:text-white transition duration-200"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M17 16h.01" /></svg></div><span class="text-xs mt-1 text-gray-600 font-medium">خدمات</span></div>
+
+                        <div class="flex flex-col items-center group cursor-pointer"><div class="w-12 h-12 bg-pink-500 bg-opacity-10 text-pink-600 rounded-xl flex items-center justify-center group-hover:bg-pink-600 group-hover:text-white transition duration-200"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /></svg></div><span class="text-xs mt-1 text-gray-600 font-medium">أدوات مطبخ</span></div>
+
+                        <div class="flex flex-col items-center group cursor-pointer"><div class="w-12 h-12 bg-green-500 bg-opacity-10 text-green-600 rounded-xl flex items-center justify-center group-hover:bg-green-600 group-hover:text-white transition duration-200"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div><span class="text-xs mt-1 text-gray-600 font-medium">هدايا</span></div>
+
+                        <div class="flex flex-col items-center group cursor-pointer"><div class="w-12 h-12 bg-teal-500 bg-opacity-10 text-primary-teal rounded-xl flex items-center justify-center group-hover:bg-primary-teal group-hover:text-white transition duration-200"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2m12 0h2a2 2 0 012 2v5a2 2 0 01-2 2H4a2 2 0 01-2-2v-5a2 2 0 012-2h2m12 0H4" /></svg></div><span class="text-xs mt-1 text-gray-600 font-medium">ملابس</span></div>
+
                     </div>
                 </div>
 
                 <div class="px-4 py-4 border-t border-gray-100">
                     <h3 class="text-lg font-semibold text-gray-700 mb-3">عروض مميزة</h3>
-                    <div class="flex space-x-4 space-x-reverse overflow-x-auto pb-2">
+                    <div id="productsContainer" class="flex space-x-4 space-x-reverse horizontal-scroll pb-2">
                         
-                        <div class="product-card flex-shrink-0 w-40 bg-white border border-gray-100 rounded-xl shadow-md p-3 cursor-pointer hover:shadow-lg transition duration-200">
+                        <div class="product-card flex-shrink-0 w-40 bg-white border border-gray-100 rounded-xl shadow-md p-3 cursor-pointer hover:shadow-lg transition duration-200" data-name="سماعات لاسلكية X50">
                             <img src="https://placehold.co/150x150/d1d5db/333333?text=سماعات" alt="سماعات رأس لاسلكية" class="w-full h-auto rounded-lg mb-2">
                             <h4 class="text-sm font-semibold text-gray-800 truncate">سماعات لاسلكية X50</h4>
                             <div class="flex items-center text-yellow-500 text-xs mt-1 mb-2">
@@ -88,7 +110,7 @@
                             <button class="w-full mt-2 text-xs bg-primary-teal text-white py-1 rounded-lg hover:bg-opacity-90 transition duration-150" onclick="navigateTo('details-page')">عرض التفاصيل</button>
                         </div>
 
-                        <div class="flex-shrink-0 w-40 bg-white border border-gray-100 rounded-xl shadow-md p-3 cursor-pointer hover:shadow-lg transition duration-200">
+                        <div class="product-card flex-shrink-0 w-40 bg-white border border-gray-100 rounded-xl shadow-md p-3 cursor-pointer hover:shadow-lg transition duration-200" data-name="كاميرا أكشن 4K">
                             <img src="https://placehold.co/150x150/6b7280/ffffff?text=كاميرا" alt="كاميرا أكشن 4K" class="w-full h-auto rounded-lg mb-2">
                             <h4 class="text-sm font-semibold text-gray-800 truncate">كاميرا أكشن 4K</h4>
                             <div class="flex items-center text-yellow-500 text-xs mt-1 mb-2">
@@ -99,7 +121,7 @@
                             <button class="w-full mt-2 text-xs bg-primary-teal text-white py-1 rounded-lg hover:bg-opacity-90 transition duration-150" onclick="navigateTo('details-page')">عرض التفاصيل</button>
                         </div>
 
-                        <div class="flex-shrink-0 w-40 bg-white border border-gray-100 rounded-xl shadow-md p-3 cursor-pointer hover:shadow-lg transition duration-200">
+                        <div class="product-card flex-shrink-0 w-40 bg-white border border-gray-100 rounded-xl shadow-md p-3 cursor-pointer hover:shadow-lg transition duration-200" data-name="مساعد AI محمول">
                             <img src="https://placehold.co/150x150/1e293b/ffffff?text=AI+Device" alt="جهاز مساعد بالذكاء الاصطناعي" class="w-full h-auto rounded-lg mb-2">
                             <h4 class="text-sm font-semibold text-gray-800 truncate">مساعد AI محمول</h4>
                             <div class="flex items-center text-yellow-500 text-xs mt-1 mb-2">
@@ -109,6 +131,7 @@
                             <p class="text-lg font-bold text-primary-teal">320.00 ر.س</p>
                             <button class="w-full mt-2 text-xs bg-primary-teal text-white py-1 rounded-lg hover:bg-opacity-90 transition duration-150" onclick="navigateTo('details-page')">عرض التفاصيل</button>
                         </div>
+
                     </div>
                 </div>
             </div> <div id="details-page" class="page-content">
@@ -272,7 +295,8 @@
                         </svg>
                     </button>
                     <span class="text-lg font-semibold text-gray-800">القائمة</span>
-                    <div class="h-6 w-6"></div> </header>
+                    <div class="h-6 w-6"></div>
+                </header>
 
                 <div class="p-4 space-y-3">
 
@@ -323,6 +347,34 @@
                 window.scrollTo(0, 0);
             }
         }
+
+        // كود وظيفة البحث الجديدة
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('searchInput');
+            const productsContainer = document.getElementById('productsContainer');
+
+            if (searchInput && productsContainer) {
+                searchInput.addEventListener('input', (e) => {
+                    // تحويل النص المدخل إلى حروف صغيرة لإهمال حالة الأحرف
+                    const searchTerm = e.target.value.trim().toLowerCase();
+                    const productCards = productsContainer.querySelectorAll('.product-card');
+
+                    productCards.forEach(card => {
+                        // جلب اسم المنتج من السمة data-name
+                        const productName = card.getAttribute('data-name').toLowerCase();
+                        
+                        // إظهار البطاقة إذا كان اسم المنتج يحتوي على كلمة البحث، وإلا إخفاؤها
+                        if (productName.includes(searchTerm)) {
+                            card.style.display = 'block'; 
+                            card.classList.remove('hidden'); // تأكد من إزالة أي كلاس إخفاء
+                        } else {
+                            card.style.display = 'none'; // إخفاء البطاقة
+                            card.classList.add('hidden'); // إضافة كلاس إخفاء إضافي (اختياري)
+                        }
+                    });
+                });
+            }
+        });
     </script>
 
 </body>
