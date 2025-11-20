@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>أكاديمية تسويق بأمان</title>
+    <title>Aman Marketing Academy</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Cairo', 'Inter', sans-serif;
+            font-family: 'Inter', 'Cairo', sans-serif;
             background-color: #f7f7f7;
         }
         .text-primary-teal {
@@ -17,11 +17,11 @@
         .bg-primary-teal {
             background-color: #1abc9c;
         }
-        /* إخفاء الصفحات الأخرى افتراضياً */
+        /* Hide all pages by default */
         .page-content { display: none; }
-        /* إظهار الصفحة النشطة */
+        /* Show active page */
         .page-content.active { display: block; }
-        /* نمط التمرير الأفقي للفئات والمنتجات */
+        /* Horizontal scroll styling */
         .horizontal-scroll {
             overflow-x: auto;
             -webkit-overflow-scrolling: touch;
@@ -40,9 +40,9 @@
             
             <div id="home-page" class="page-content active">
                 <header class="p-4 flex justify-between items-center border-b border-gray-100">
-                    <div class="flex items-center space-x-2 space-x-reverse">
-                        <img src="https://i.ibb.co/Kp7JyFrT/Photoroom.png" alt="شعار الأكاديمية" class="h-8 rounded-full shadow-md">
-                        <span class="text-2xl font-extrabold text-primary-teal">أكاديمية تسويق بأمان</span>
+                    <div class="flex items-center space-x-2">
+                        <img src="https://i.ibb.co/Kp7JyFrT/Photoroom.png" alt="Academy Logo" class="h-8 rounded-full shadow-md">
+                        <span class="text-2xl font-extrabold text-primary-teal">Aman Marketing Academy</span>
                     </div>
                     <button class="text-gray-500 hover:text-gray-800 p-2 rounded-full transition duration-150" onclick="navigateTo('sidebar-page')">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -53,8 +53,8 @@
 
                 <div class="p-4">
                     <div class="relative">
-                        <input id="searchInput" type="text" placeholder="ابحث عن منتج، متجر، أو عرض..." class="w-full py-3 pr-12 pl-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-teal focus:border-primary-teal transition duration-150 text-right">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 absolute top-1/2 left-3 transform -translate-y-1/2 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <input id="searchInput" type="text" placeholder="Search for a product, service, or offer..." class="w-full py-3 pl-12 pr-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-teal focus:border-primary-teal transition duration-150 text-left">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 absolute top-1/2 right-3 transform -translate-y-1/2 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                         </svg>
                     </div>
@@ -62,74 +62,85 @@
 
                 <div class="px-4 pb-4">
                     <div class="relative w-full h-40 rounded-xl overflow-hidden shadow-lg">
-                        <img src="https://i.ibb.co/DDxTH6sK/Screenshot-20251120-050640.jpg" alt="صورة الغلاف - اكسب، روّج بذكاء" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x200/1abc9c/ffffff?text=اكسب+الكثير،+روّج+بذكاء';">
+                        <img src="https://i.ibb.co/DDxTH6sK/Screenshot-20251120-050640.jpg" alt="Cover Image - Earn Big, Promote Smartly" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x200/1abc9c/ffffff?text=Earn+Big,+Promote+Smartly';">
                         <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
                             <div class="text-center">
-                                <h2 class="text-2xl font-extrabold text-white leading-tight">اكسب الكثير، روّج بذكاء</h2>
-                                <p class="text-sm text-gray-200 mt-1">ابدأ رحلتك في التسويق بأمان اليوم</p>
+                                <h2 class="text-2xl font-extrabold text-white leading-tight">Earn Big, Promote Smartly</h2>
+                                <p class="text-sm text-gray-200 mt-1">Start your safe marketing journey today</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="px-4 py-4 border-t border-gray-100">
-                    <h3 class="text-lg font-semibold text-gray-700 mb-3">تصفح الفئات</h3>
+                    <h3 class="text-lg font-semibold text-gray-700 mb-3">Browse Categories</h3>
                     <div class="grid grid-cols-4 gap-4 text-center">
                         
-                        <div class="flex flex-col items-center group cursor-pointer"><div class="w-12 h-12 bg-blue-500 bg-opacity-10 text-blue-600 rounded-xl flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition duration-200"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.205 5 7.5 5A3.5 3.5 0 004 8.5c0 .907.258 1.76.743 2.5M12 6.253C13.168 5.477 14.795 5 16.5 5A3.5 3.5 0 0120 8.5c0 .907-.258 1.76-.743 2.5M12 11.253v-5m0 5H9.25m2.75 0H15.75" /></svg></div><span class="text-xs mt-1 text-gray-600 font-medium">كتب</span></div>
+                        <div class="flex flex-col items-center group cursor-pointer"><div class="w-12 h-12 bg-blue-500 bg-opacity-10 text-blue-600 rounded-xl flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition duration-200"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.205 5 7.5 5A3.5 3.5 0 004 8.5c0 .907.258 1.76.743 2.5M12 6.253C13.168 5.477 14.795 5 16.5 5A3.5 3.5 0 0120 8.5c0 .907-.258 1.76-.743 2.5M12 11.253v-5m0 5H9.25m2.75 0H15.75" /></svg></div><span class="text-xs mt-1 text-gray-600 font-medium">Books</span></div>
                         
-                        <div class="flex flex-col items-center group cursor-pointer"><div class="w-12 h-12 bg-yellow-500 bg-opacity-10 text-yellow-600 rounded-xl flex items-center justify-center group-hover:bg-yellow-600 group-hover:text-white transition duration-200"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg></div><span class="text-xs mt-1 text-gray-600 font-medium">دورات</span></div>
+                        <div class="flex flex-col items-center group cursor-pointer"><div class="w-12 h-12 bg-yellow-500 bg-opacity-10 text-yellow-600 rounded-xl flex items-center justify-center group-hover:bg-yellow-600 group-hover:text-white transition duration-200"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg></div><span class="text-xs mt-1 text-gray-600 font-medium">Courses</span></div>
                         
-                        <div class="flex flex-col items-center group cursor-pointer"><div class="w-12 h-12 bg-purple-500 bg-opacity-10 text-purple-600 rounded-xl flex items-center justify-center group-hover:bg-purple-600 group-hover:text-white transition duration-200"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 17h18M5 17V8a2 2 0 012-2h10a2 2 0 012 2v9M9 3h6" /></svg></div><span class="text-xs mt-1 text-gray-600 font-medium">رقمية</span></div>
+                        <div class="flex flex-col items-center group cursor-pointer"><div class="w-12 h-12 bg-purple-500 bg-opacity-10 text-purple-600 rounded-xl flex items-center justify-center group-hover:bg-purple-600 group-hover:text-white transition duration-200"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 17h18M5 17V8a2 2 0 012-2h10a2 2 0 012 2v9M9 3h6" /></svg></div><span class="text-xs mt-1 text-gray-600 font-medium">Digital</span></div>
                         
-                        <div class="flex flex-col items-center group cursor-pointer"><div class="w-12 h-12 bg-red-500 bg-opacity-10 text-red-600 rounded-xl flex items-center justify-center group-hover:bg-red-600 group-hover:text-white transition duration-200"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V7a2 2 0 012-2h14a2 2 0 012 2v3a2 2 0 01-2 2M5 12a2 2 0 00-2 2v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 00-2-2m-2-4h.01M17 16h.01" /></svg></div><span class="text-xs mt-1 text-gray-600 font-medium">إلكترونيات</span></div>
+                        <div class="flex flex-col items-center group cursor-pointer"><div class="w-12 h-12 bg-red-500 bg-opacity-10 text-red-600 rounded-xl flex items-center justify-center group-hover:bg-red-600 group-hover:text-white transition duration-200"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V7a2 2 0 012-2h14a2 2 0 012 2v3a2 2 0 01-2 2M5 12a2 2 0 00-2 2v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 00-2-2m-2-4h.01M17 16h.01" /></svg></div><span class="text-xs mt-1 text-gray-600 font-medium">Electronics</span></div>
 
-                        <div class="flex flex-col items-center group cursor-pointer"><div class="w-12 h-12 bg-indigo-500 bg-opacity-10 text-indigo-600 rounded-xl flex items-center justify-center group-hover:bg-indigo-600 group-hover:text-white transition duration-200"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M17 16h.01" /></svg></div><span class="text-xs mt-1 text-gray-600 font-medium">خدمات</span></div>
+                        <div class="flex flex-col items-center group cursor-pointer"><div class="w-12 h-12 bg-indigo-500 bg-opacity-10 text-indigo-600 rounded-xl flex items-center justify-center group-hover:bg-indigo-600 group-hover:text-white transition duration-200"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M17 16h.01" /></svg></div><span class="text-xs mt-1 text-gray-600 font-medium">Services</span></div>
 
-                        <div class="flex flex-col items-center group cursor-pointer"><div class="w-12 h-12 bg-pink-500 bg-opacity-10 text-pink-600 rounded-xl flex items-center justify-center group-hover:bg-pink-600 group-hover:text-white transition duration-200"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /></svg></div><span class="text-xs mt-1 text-gray-600 font-medium">أدوات مطبخ</span></div>
+                        <div class="flex flex-col items-center group cursor-pointer"><div class="w-12 h-12 bg-pink-500 bg-opacity-10 text-pink-600 rounded-xl flex items-center justify-center group-hover:bg-pink-600 group-hover:text-white transition duration-200"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /></svg></div><span class="text-xs mt-1 text-gray-600 font-medium">Kitchen Tools</span></div>
 
-                        <div class="flex flex-col items-center group cursor-pointer"><div class="w-12 h-12 bg-green-500 bg-opacity-10 text-green-600 rounded-xl flex items-center justify-center group-hover:bg-green-600 group-hover:text-white transition duration-200"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div><span class="text-xs mt-1 text-gray-600 font-medium">هدايا</span></div>
+                        <div class="flex flex-col items-center group cursor-pointer"><div class="w-12 h-12 bg-green-500 bg-opacity-10 text-green-600 rounded-xl flex items-center justify-center group-hover:bg-green-600 group-hover:text-white transition duration-200"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div><span class="text-xs mt-1 text-gray-600 font-medium">Gifts</span></div>
 
-                        <div class="flex flex-col items-center group cursor-pointer"><div class="w-12 h-12 bg-teal-500 bg-opacity-10 text-primary-teal rounded-xl flex items-center justify-center group-hover:bg-primary-teal group-hover:text-white transition duration-200"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2m12 0h2a2 2 0 012 2v5a2 2 0 01-2 2H4a2 2 0 01-2-2v-5a2 2 0 012-2h2m12 0H4" /></svg></div><span class="text-xs mt-1 text-gray-600 font-medium">ملابس</span></div>
+                        <div class="flex flex-col items-center group cursor-pointer"><div class="w-12 h-12 bg-teal-500 bg-opacity-10 text-primary-teal rounded-xl flex items-center justify-center group-hover:bg-primary-teal group-hover:text-white transition duration-200"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2m12 0h2a2 2 0 012 2v5a2 2 0 01-2 2H4a2 2 0 01-2-2v-5a2 2 0 012-2h2m12 0H4" /></svg></div><span class="text-xs mt-1 text-gray-600 font-medium">Clothing</span></div>
 
                     </div>
                 </div>
 
                 <div class="px-4 py-4 border-t border-gray-100">
-                    <h3 class="text-lg font-semibold text-gray-700 mb-3">عروض مميزة</h3>
-                    <div id="productsContainer" class="flex space-x-4 space-x-reverse horizontal-scroll pb-2">
+                    <h3 class="text-lg font-semibold text-gray-700 mb-3">Featured Deals</h3>
+                    <div id="productsContainer" class="flex space-x-4 horizontal-scroll pb-2">
                         
-                        <div class="product-card flex-shrink-0 w-40 bg-white border border-gray-100 rounded-xl shadow-md p-3 cursor-pointer hover:shadow-lg transition duration-200" data-name="سماعات لاسلكية X50">
-                            <img src="https://placehold.co/150x150/d1d5db/333333?text=سماعات" alt="سماعات رأس لاسلكية" class="w-full h-auto rounded-lg mb-2">
-                            <h4 class="text-sm font-semibold text-gray-800 truncate">سماعات لاسلكية X50</h4>
+                        <div class="product-card flex-shrink-0 w-40 bg-white border border-gray-100 rounded-xl shadow-md p-3 cursor-pointer hover:shadow-lg transition duration-200" data-type="goods" data-name="Wireless Headphones X50">
+                            <img src="https://placehold.co/150x150/d1d5db/333333?text=Headphones" alt="Wireless Headphones X50" class="w-full h-auto rounded-lg mb-2">
+                            <h4 class="text-sm font-semibold text-gray-800 truncate">Wireless Headphones X50</h4>
                             <div class="flex items-center text-yellow-500 text-xs mt-1 mb-2">
                                 <span>★</span><span>★</span><span>★</span><span>★</span><span class="text-gray-300">★</span>
-                                <span class="text-gray-500 text-xs mr-1">(4.2)</span>
+                                <span class="text-gray-500 text-xs ml-1">(4.2)</span>
                             </div>
-                            <p class="text-lg font-bold text-primary-teal">199.99 ر.س</p>
-                            <button class="w-full mt-2 text-xs bg-primary-teal text-white py-1 rounded-lg hover:bg-opacity-90 transition duration-150" onclick="navigateTo('details-page')">عرض التفاصيل</button>
+                            <p class="text-lg font-bold text-primary-teal">199.99 SAR</p>
+                            <button class="w-full mt-2 text-xs bg-primary-teal text-white py-1 rounded-lg hover:bg-opacity-90 transition duration-150" onclick="showDetails('goods', 'Wireless Headphones X50', '199.99 SAR')">View Details</button>
                         </div>
 
-                        <div class="product-card flex-shrink-0 w-40 bg-white border border-gray-100 rounded-xl shadow-md p-3 cursor-pointer hover:shadow-lg transition duration-200" data-name="كاميرا أكشن 4K">
-                            <img src="https://placehold.co/150x150/6b7280/ffffff?text=كاميرا" alt="كاميرا أكشن 4K" class="w-full h-auto rounded-lg mb-2">
-                            <h4 class="text-sm font-semibold text-gray-800 truncate">كاميرا أكشن 4K</h4>
+                        <div class="product-card flex-shrink-0 w-40 bg-white border border-gray-100 rounded-xl shadow-md p-3 cursor-pointer hover:shadow-lg transition duration-200" data-type="goods" data-name="4K Action Camera">
+                            <img src="https://placehold.co/150x150/6b7280/ffffff?text=Camera" alt="4K Action Camera" class="w-full h-auto rounded-lg mb-2">
+                            <h4 class="text-sm font-semibold text-gray-800 truncate">4K Action Camera</h4>
                             <div class="flex items-center text-yellow-500 text-xs mt-1 mb-2">
                                 <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                                <span class="text-gray-500 text-xs mr-1">(4.9)</span>
+                                <span class="text-gray-500 text-xs ml-1">(4.9)</span>
                             </div>
-                            <p class="text-lg font-bold text-primary-teal">850.00 ر.س</p>
-                            <button class="w-full mt-2 text-xs bg-primary-teal text-white py-1 rounded-lg hover:bg-opacity-90 transition duration-150" onclick="navigateTo('details-page')">عرض التفاصيل</button>
+                            <p class="text-lg font-bold text-primary-teal">850.00 SAR</p>
+                            <button class="w-full mt-2 text-xs bg-primary-teal text-white py-1 rounded-lg hover:bg-opacity-90 transition duration-150" onclick="showDetails('goods', '4K Action Camera', '850.00 SAR')">View Details</button>
                         </div>
 
-                        <div class="product-card flex-shrink-0 w-40 bg-white border border-gray-100 rounded-xl shadow-md p-3 cursor-pointer hover:shadow-lg transition duration-200" data-name="مساعد AI محمول">
-                            <img src="https://placehold.co/150x150/1e293b/ffffff?text=AI+Device" alt="جهاز مساعد بالذكاء الاصطناعي" class="w-full h-auto rounded-lg mb-2">
-                            <h4 class="text-sm font-semibold text-gray-800 truncate">مساعد AI محمول</h4>
+                        <div class="product-card flex-shrink-0 w-40 bg-white border border-gray-100 rounded-xl shadow-md p-3 cursor-pointer hover:shadow-lg transition duration-200" data-type="goods" data-name="Portable AI Assistant">
+                            <img src="https://placehold.co/150x150/1e293b/ffffff?text=AI+Device" alt="Portable AI Assistant" class="w-full h-auto rounded-lg mb-2">
+                            <h4 class="text-sm font-semibold text-gray-800 truncate">Portable AI Assistant</h4>
                             <div class="flex items-center text-yellow-500 text-xs mt-1 mb-2">
                                 <span>★</span><span>★</span><span>★</span><span class="text-gray-300">★</span><span class="text-gray-300">★</span>
-                                <span class="text-gray-500 text-xs mr-1">(3.5)</span>
+                                <span class="text-gray-500 text-xs ml-1">(3.5)</span>
                             </div>
-                            <p class="text-lg font-bold text-primary-teal">320.00 ر.س</p>
-                            <button class="w-full mt-2 text-xs bg-primary-teal text-white py-1 rounded-lg hover:bg-opacity-90 transition duration-150" onclick="navigateTo('details-page')">عرض التفاصيل</button>
+                            <p class="text-lg font-bold text-primary-teal">320.00 SAR</p>
+                            <button class="w-full mt-2 text-xs bg-primary-teal text-white py-1 rounded-lg hover:bg-opacity-90 transition duration-150" onclick="showDetails('goods', 'Portable AI Assistant', '320.00 SAR')">View Details</button>
+                        </div>
+
+                        <div class="product-card flex-shrink-0 w-40 bg-white border border-gray-100 rounded-xl shadow-md p-3 cursor-pointer hover:shadow-lg transition duration-200" data-type="service" data-name="Custom Website Development">
+                            <img src="https://placehold.co/150x150/1abc9c/ffffff?text=Service" alt="Custom Website Development" class="w-full h-auto rounded-lg mb-2">
+                            <h4 class="text-sm font-semibold text-gray-800 truncate">Custom Website Development</h4>
+                            <div class="flex items-center text-yellow-500 text-xs mt-1 mb-2">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                <span class="text-gray-500 text-xs ml-1">(5.0)</span>
+                            </div>
+                            <p class="text-lg font-bold text-primary-teal">Request a Quote</p>
+                            <button class="w-full mt-2 text-xs bg-primary-teal text-white py-1 rounded-lg hover:bg-opacity-90 transition duration-150" onclick="showDetails('service', 'Custom Website Development', 'Starts from 500 SAR')">Request Service</button>
                         </div>
 
                     </div>
@@ -138,10 +149,10 @@
                 <header class="p-4 flex justify-between items-center border-b border-gray-100">
                     <button class="text-gray-500 hover:text-gray-800" onclick="navigateTo('home-page')">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                         </svg>
                     </button>
-                    <span class="text-lg font-semibold text-gray-800">تفاصيل المنتج</span>
+                    <span class="text-lg font-semibold text-gray-800">Product Details</span>
                     <button class="text-gray-500 hover:text-gray-800 p-2 rounded-full transition duration-150">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -151,58 +162,52 @@
 
                 <div class="p-4 overflow-y-auto" style="max-height: calc(100vh - 60px);">
                     <div class="flex justify-center mb-4">
-                        <img src="https://placehold.co/200x200/d1d5db/333333?text=سماعات+X50" alt="صورة المنتج" class="w-48 h-48 object-cover rounded-xl shadow-lg">
+                        <img id="details-image" src="https://placehold.co/200x200/d1d5db/333333?text=Product+Image" alt="Product Image" class="w-48 h-48 object-cover rounded-xl shadow-lg">
                     </div>
                     
-                    <h1 class="text-2xl font-bold text-gray-800 mb-2">سماعات لاسلكية X50</h1>
+                    <h1 id="details-name" class="text-2xl font-bold text-gray-800 mb-2">Wireless Headphones X50</h1>
                     
                     <div class="flex items-center text-yellow-500 mb-4">
                         <span>★</span><span>★</span><span>★</span><span>★</span><span class="text-gray-300">★</span>
-                        <span class="text-gray-500 text-sm mr-2">(تقييم 4.2 من 5 - 120 مراجعة)</span>
+                        <span class="text-gray-500 text-sm ml-2">(4.2 out of 5 - 120 reviews)</span>
                     </div>
 
                     <div class="flex justify-between items-baseline mb-4">
-                        <span class="text-xl font-extrabold text-gray-700">125 - 150 ر.س</span>
-                        <button class="flex items-center bg-primary-teal text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-opacity-90 transition duration-150" onclick="navigateTo('checkout-page')">
-                            شراء الآن
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                        <span id="details-price" class="text-xl font-extrabold text-gray-700">199.99 SAR</span>
+                        <button id="details-action-button" class="flex items-center bg-primary-teal text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-opacity-90 transition duration-150" onclick="navigateTo('checkout-page')">
+                            Buy Now
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l-5 5m0 0l5 5m-5-5h14" />
                             </svg>
                         </button>
                     </div>
 
                     <div class="bg-primary-teal text-white p-4 rounded-xl shadow-md mb-6">
-                        <h3 class="text-lg font-bold mb-2">لماذا نوصي به:</h3>
-                        <ul class="space-y-1 text-sm list-none p-0 m-0 pr-4">
-                            <li class="flex items-center">
-                                <span class="text-xl leading-none ml-2">•</span> جودة تصنيع وخامات عالية
-                            </li>
-                            <li class="flex items-center">
-                                <span class="text-xl leading-none ml-2">•</span> صوت نقي وممتاز
-                            </li>
-                            <li class="flex items-center">
-                                <span class="text-xl leading-none ml-2">•</span> مريحة وقابلة للتعديل
-                            </li>
+                        <h3 class="text-lg font-bold mb-2">Why we recommend it:</h3>
+                        <ul class="space-y-1 text-sm list-disc pl-4">
+                            <li>High quality manufacturing and materials</li>
+                            <li>Excellent and clear sound</li>
+                            <li>Comfortable and adjustable</li>
                         </ul>
                     </div>
 
                     <div class="mb-6">
-                        <h3 class="text-lg font-bold text-gray-700 mb-2 border-b pb-1">المواصفات</h3>
+                        <h3 class="text-lg font-bold text-gray-700 mb-2 border-b pb-1">Specifications</h3>
                         <p class="text-gray-600 text-sm">
-                            * مدة البطارية: تصل إلى 30 ساعة <br>
-                            * نطاق البلوتوث: 10 أمتار <br>
-                            * اللون: أسود (متوفر ألوان أخرى) <br>
+                            * Battery Life: Up to 30 hours <br>
+                            * Bluetooth Range: 10 meters <br>
+                            * Color: Black (other colors available) <br>
                         </p>
                     </div>
 
                     <div class="mb-8">
-                        <h3 class="text-lg font-bold text-gray-700 mb-3 border-b pb-1">مراجعات العملاء</h3>
+                        <h3 class="text-lg font-bold text-gray-700 mb-3 border-b pb-1">Customer Reviews</h3>
                         <div class="p-3 bg-gray-50 rounded-lg mb-2">
                             <div class="flex items-center justify-between text-xs text-gray-500">
-                                <span>محمد أ.</span>
+                                <span>Mohamed A.</span>
                                 <div class="text-yellow-500">★★★★★</div>
                             </div>
-                            <p class="text-sm mt-1 text-gray-700">منتج رائع! جودة الصوت ممتازة والراحة أثناء الارتداء لا تُقارن. أنصح به بشدة.</p>
+                            <p class="text-sm mt-1 text-gray-700">Great product! Excellent sound quality and comfort are unmatched. Highly recommended.</p>
                         </div>
                     </div>
                 </div>
@@ -210,10 +215,10 @@
                 <header class="p-4 flex justify-between items-center border-b border-gray-100">
                     <button class="text-gray-500 hover:text-gray-800" onclick="navigateTo('details-page')">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                         </svg>
                     </button>
-                    <span class="text-lg font-semibold text-gray-800">الدفع</span>
+                    <span class="text-lg font-semibold text-gray-800">Checkout</span>
                     <button class="text-gray-500 hover:text-gray-800 p-2 rounded-full transition duration-150" onclick="navigateTo('home-page')">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -224,68 +229,100 @@
                 <div class="p-4 space-y-6">
 
                     <div class="p-4 bg-gray-50 rounded-xl shadow-sm">
-                        <h3 class="text-lg font-bold text-gray-800 mb-3 border-b pb-2">ملخص طلبك</h3>
+                        <h3 class="text-lg font-bold text-gray-800 mb-3 border-b pb-2">Order Summary</h3>
                         
                         <div class="flex items-center justify-between mb-3 pb-3 border-b border-gray-100">
-                            <div class="flex items-center space-x-3 space-x-reverse">
-                                <img src="https://placehold.co/50x50/d1d5db/333333?text=سماعات" alt="سماعات" class="w-12 h-12 rounded-lg object-cover">
+                            <div class="flex items-center space-x-3">
+                                <img src="https://placehold.co/50x50/d1d5db/333333?text=Headphones" alt="Headphones" class="w-12 h-12 rounded-lg object-cover">
                                 <div>
-                                    <p class="text-sm font-semibold text-gray-700">سماعات لاسلكية X50 (الكمية: 1)</p>
+                                    <p class="text-sm font-semibold text-gray-700">Wireless Headphones X50 (Quantity: 1)</p>
                                     <div class="flex items-center text-yellow-500 text-xs mt-1">
                                         <span>★</span><span>★</span><span>★</span><span>★</span><span class="text-gray-300">★</span>
                                     </div>
                                 </div>
                             </div>
-                            <span class="text-sm text-primary-teal font-bold">135 ر.س</span>
+                            <span class="text-sm text-primary-teal font-bold">135 SAR</span>
                         </div>
 
                         <div class="flex items-center justify-between">
-                            <div class="flex items-center space-x-3 space-x-reverse">
-                                <img src="https://placehold.co/50x50/99f6e4/065f46?text=دورة" alt="دورة" class="w-12 h-12 rounded-lg object-cover">
+                            <div class="flex items-center space-x-3">
+                                <img src="https://placehold.co/50x50/99f6e4/065f46?text=Course" alt="Course" class="w-12 h-12 rounded-lg object-cover">
                                 <div>
-                                    <p class="text-sm font-semibold text-gray-700">دورة تدريبية عبر الإنترنت (الكمية: 1)</p>
+                                    <p class="text-sm font-semibold text-gray-700">Online Training Course (Quantity: 1)</p>
                                     <div class="flex items-center text-yellow-500 text-xs mt-1">
                                         <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                                     </div>
                                 </div>
                             </div>
-                            <span class="text-sm text-primary-teal font-bold">50 ر.س</span>
+                            <span class="text-sm text-primary-teal font-bold">50 SAR</span>
                         </div>
                     </div>
 
                     <div class="p-4 bg-gray-50 rounded-xl shadow-sm">
-                        <h3 class="text-lg font-bold text-gray-800 mb-3 border-b pb-2">عنوان الشحن</h3>
+                        <h3 class="text-lg font-bold text-gray-800 mb-3 border-b pb-2">Shipping Address</h3>
                         <p class="text-sm text-gray-600">
-                            المنطقة: الرياض، حي النخيل، شارع الأمير محمد، مبنى رقم 123.
+                            Region: Riyadh, Al-Nakhil District, Prince Mohammed St., Building 123.
                             <br>
-                            <span class="text-xs text-gray-400">يمكنك تغيير العنوان في صفحة الإعدادات</span>
+                            <span class="text-xs text-gray-400">You can change the address in the settings page</span>
                         </p>
                     </div>
 
                     <div class="p-4 bg-gray-50 rounded-xl shadow-sm">
-                        <h3 class="text-lg font-bold text-gray-800 mb-3 border-b pb-2">إجمالي الطلب</h3>
+                        <h3 class="text-lg font-bold text-gray-800 mb-3 border-b pb-2">Order Total</h3>
                         <div class="space-y-2 text-sm">
                             <div class="flex justify-between">
-                                <span class="text-gray-600">المجموع الفرعي</span>
-                                <span class="font-semibold text-gray-800">185.00 ر.س</span>
+                                <span class="text-gray-600">Subtotal</span>
+                                <span class="font-semibold text-gray-800">185.00 SAR</span>
                             </div>
                             <div class="flex justify-between">
-                                <span class="text-gray-600">الشحن</span>
-                                <span class="font-semibold text-gray-800">20.00 ر.س</span>
+                                <span class="text-gray-600">Shipping</span>
+                                <span class="font-semibold text-gray-800">20.00 SAR</span>
                             </div>
                             <div class="flex justify-between pt-2 border-t font-bold text-base">
-                                <span class="text-gray-800">الإجمالي الكلي</span>
-                                <span class="text-primary-teal">205.00 ر.س</span>
+                                <span class="text-gray-800">Grand Total</span>
+                                <span class="text-primary-teal">205.00 SAR</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="p-4 pt-0">
                         <button class="w-full bg-primary-teal text-white text-lg font-bold py-3 rounded-full shadow-xl hover:bg-opacity-90 transition duration-150">
-                            تأكيد والدفع
+                            Confirm and Pay
                         </button>
                     </div>
 
+                </div>
+            </div> <div id="contact-page" class="page-content">
+                <header class="p-4 flex justify-between items-center border-b border-gray-100">
+                    <button class="text-gray-500 hover:text-gray-800" onclick="navigateTo('home-page')">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <span class="text-lg font-semibold text-gray-800">Request Service</span>
+                    <div class="h-6 w-6"></div>
+                </header>
+                <div class="p-4 space-y-6">
+                    <h1 class="text-2xl font-bold text-gray-800">Contact Us to Request Your Service</h1>
+                    <p class="text-gray-600">Please choose your preferred method of communication below. We will get back to you as soon as possible to discuss your service requirements.</p>
+
+                    <div class="bg-gray-100 p-4 rounded-xl shadow-sm border border-gray-200">
+                        <h3 id="contact-service-name" class="text-xl font-bold text-gray-800 mb-2">Service: [Service Name Placeholder]</h3>
+                        <p id="contact-service-price" class="text-sm text-primary-teal font-semibold">Price starts from: [Price Placeholder]</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <a href="https://t.me/rxstore0" target="_blank" class="flex items-center p-4 bg-blue-500 text-white rounded-xl shadow-lg hover:bg-blue-600 transition duration-150">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" viewBox="0 0 448 512" fill="currentColor"><path d="M446.7 98.6l-67.6 318.8c-1.5 5.5-4.4 9.4-8.3 12.3-.5.4-1.1.7-1.7 1.2-4.1 3-8.8 4.7-13.8 4.7-1.4 0-2.8-.2-4.2-.6l-134.1-44.1-103.8 77.9c-2.3 1.7-5.1 2.7-8.1 2.7-1.6 0-3.1-.3-4.5-.9s-2.7-1.7-3.6-3.1L24.6 244.3c-3.8-12.7 1.1-26.3 12.3-33.8l380.1-240.2c11.6-7.4 25.8-3.4 33.1 8.8s3.4 25.8-8.8 33.1zM170.8 376.5l37.2-126.3 142.3-89.2c1.7-1.1 3.5-1.9 5.5-2.2 4.1-.7 8.1 1 11 3.7 2.9 2.7 4.5 6.4 4.5 10.3 0 1.2-.3 2.5-.8 3.6L201.2 386.4l-30.4-9.9z"/></svg>
+                            <span class="font-bold">Contact via Telegram</span>
+                        </a>
+
+                        <a href="#" target="_blank" class="flex items-center p-4 bg-green-500 text-white rounded-xl shadow-lg hover:bg-green-600 transition duration-150">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" viewBox="0 0 448 512" fill="currentColor"><path d="M380.9 97.1C339.4 55.4 286.3 32 224 32S108.6 55.4 67.1 97.1 32 182.2 32 244c0 30.2 6.7 59.8 19.3 86.8L32 480l139.7-44.4c27.1 12.6 56.7 19.3 86.8 19.3 62.3 0 115.4-23.4 156.9-65.1S416 306.3 416 244c0-61.8-23.4-114.9-65.1-156.9zM224 416c-48.4 0-92.4-19.1-125.7-52.5S50 292.4 50 244c0-48.4 19.1-92.4 52.5-125.7S175.6 66 224 66s92.4 19.1 125.7 52.5S399 195.6 399 244c0 48.4-19.1 92.4-52.5 125.7S272.4 416 224 416zM277.6 225.2c-5.7-14.7-29.3-29.3-34-29.3-4.7 0-9.4 4.7-9.4 4.7s-10.7 23.3-11.8 25.9-2.3 5.3-7 5.3c-4.7 0-14.1-5.9-20.2-11.8s-7.1-10.7-7.1-15.4c0-4.7 5.9-7.1 5.9-7.1s4.7-5.9 7-7.1c2.3-1.2 4.7-2.3 7.1-2.3s4.7-1.2 7.1-1.2c2.3 0 4.7-1.2 7.1 1.2s4.7 7.1 7.1 11.8c2.3 4.7 4.7 11.8 4.7 11.8s-2.3 4.7-7 9.4z"/></svg>
+                            <span class="font-bold">Contact via WhatsApp</span>
+                        </a>
+                    </div>
+                    <p class="text-sm text-gray-400 text-center">Note: The links above are placeholders and will be connected to your control panel settings later.</p>
                 </div>
             </div> <div id="sidebar-page" class="page-content">
                 <header class="p-4 flex justify-between items-center border-b border-gray-100 bg-white">
@@ -294,37 +331,37 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                         </svg>
                     </button>
-                    <span class="text-lg font-semibold text-gray-800">القائمة</span>
-                    <div class="h-6 w-6"></div>
+                    <span class="text-lg font-semibold text-gray-800">Menu</span>
+                    <div class="h-6 w-6"></div> 
                 </header>
 
                 <div class="p-4 space-y-3">
 
                     <div class="bg-white p-4 rounded-xl shadow-md cursor-pointer hover:bg-gray-50 transition duration-150" onclick="navigateTo('home-page')">
-                        <div class="flex items-center space-x-3 space-x-reverse">
+                        <div class="flex items-center space-x-3">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                             </svg>
-                            <span class="text-lg font-medium text-gray-700">الصفحة الرئيسية</span>
+                            <span class="text-lg font-medium text-gray-700">Home</span>
                         </div>
                     </div>
 
                     <div class="bg-white p-4 rounded-xl shadow-md">
                         <h3 class="text-lg font-bold text-gray-800 mb-3 border-b pb-2 flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-teal ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-teal mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 0l-3.536-3.536m3.536 3.536L11.828 17.172m0 0l-3.536 3.536m3.536-3.536L14.142 6.868m0 0l3.536 3.536M12 21a9 9 0 110-18 9 9 0 010 18z" />
                             </svg>
-                            <span>دعم فني</span>
+                            <span>Technical Support</span>
                         </h3>
                         <div class="space-y-2">
                             <a href="https://t.me/rxstore0" target="_blank" class="flex items-center p-2 rounded-lg text-blue-600 hover:bg-blue-50 transition duration-150">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 448 512" fill="currentColor"><path d="M446.7 98.6l-67.6 318.8c-1.5 5.5-4.4 9.4-8.3 12.3-.5.4-1.1.7-1.7 1.2-4.1 3-8.8 4.7-13.8 4.7-1.4 0-2.8-.2-4.2-.6l-134.1-44.1-103.8 77.9c-2.3 1.7-5.1 2.7-8.1 2.7-1.6 0-3.1-.3-4.5-.9s-2.7-1.7-3.6-3.1L24.6 244.3c-3.8-12.7 1.1-26.3 12.3-33.8l380.1-240.2c11.6-7.4 25.8-3.4 33.1 8.8s3.4 25.8-8.8 33.1zM170.8 376.5l37.2-126.3 142.3-89.2c1.7-1.1 3.5-1.9 5.5-2.2 4.1-.7 8.1 1 11 3.7 2.9 2.7 4.5 6.4 4.5 10.3 0 1.2-.3 2.5-.8 3.6L201.2 386.4l-30.4-9.9z"/></svg>
-                                <span>قناتنا على تليجرام</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 448 512" fill="currentColor"><path d="M446.7 98.6l-67.6 318.8c-1.5 5.5-4.4 9.4-8.3 12.3-.5.4-1.1.7-1.7 1.2-4.1 3-8.8 4.7-13.8 4.7-1.4 0-2.8-.2-4.2-.6l-134.1-44.1-103.8 77.9c-2.3 1.7-5.1 2.7-8.1 2.7-1.6 0-3.1-.3-4.5-.9s-2.7-1.7-3.6-3.1L24.6 244.3c-3.8-12.7 1.1-26.3 12.3-33.8l380.1-240.2c11.6-7.4 25.8-3.4 33.1 8.8s3.4 25.8-8.8 33.1zM170.8 376.5l37.2-126.3 142.3-89.2c1.7-1.1 3.5-1.9 5.5-2.2 4.1-.7 8.1 1 11 3.7 2.9 2.7 4.5 6.4 4.5 10.3 0 1.2-.3 2.5-.8 3.6L201.2 386.4l-30.4-9.9z"/></svg>
+                                <span>Our Telegram Channel</span>
                             </a>
 
                             <a href="https://ig.me/j/AbZjCWKhCnRFxbCZ/" target="_blank" class="flex items-center p-2 rounded-lg text-pink-600 hover:bg-pink-50 transition duration-150">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 448 512" fill="currentColor"><path d="M224.1 140.2c-47.8 0-86.7 38.9-86.7 86.7s38.9 86.7 86.7 86.7 86.7-38.9 86.7-86.7-38.9-86.7-86.7-86.7zm2.5 141.7c-30.9 0-56-25.1-56-56s25.1-56 56-56 56 25.1 56 56-25.1 56-56 56zM386.4 125.7c-2.7-2.7-6-4.5-9.8-5.3-3.8-.8-7.7-.8-11.5-.1-17.6 3.1-34.9 6.8-51.5 11.2C296 90.7 259 80 219 80c-40 0-77 10.7-101.5 21.5-16.6-4.4-33.9-8.1-51.5-11.2-3.8-.7-7.7-.7-11.5.1-3.8.8-7.1 2.6-9.8 5.3-2.7 2.7-4.5 6-5.3 9.8-.8 3.8-.8 7.7.1 11.5 3.1 17.6 6.8 34.9 11.2 51.5-10.7 24.5-21.5 61.5-21.5 101.5s10.7 77 21.5 101.5c-4.4 16.6-8.1 33.9-11.2 51.5-.8 3.8-.8 7.7.1 11.5.8 3.8 2.6 7.1 5.3 9.8 2.7 2.7 6 4.5 9.8 5.3 3.8.8 7.7.8 11.5-.1 17.6-3.1 34.9-6.8 51.5-11.2 24.5 10.7 61.5 21.5 101.5 21.5s77-10.7 101.5-21.5c16.6 4.4 33.9 8.1 51.5 11.2 3.8.7 7.7.7 11.5-.1 3.8-.8 7.1-2.6 9.8-5.3 2.7-2.7 4.5-6 5.3-9.8.8-3.8.8-7.7-.1-11.5-3.1-17.6-6.8-34.9-11.2-51.5 10.7-24.5 21.5-61.5-21.5-101.5s-10.7-77-21.5-101.5c4.4-16.6 8.1-33.9 11.2-51.5.8-3.8.8-7.7-.1-11.5-.8-3.8-2.6-7.1-5.3-9.8zM417.8 349.5c.9 3.8 2.6 7.1 5.3 9.8s6 4.5 9.8 5.3c3.8.8 7.7.8 11.5-.1 17.6-3.1 34.9-6.8 51.5-11.2 24.5-10.7 61.5-21.5 101.5-21.5s77 10.7 101.5 21.5c16.6 4.4 33.9 8.1 51.5 11.2 3.8.7 7.7.7 11.5-.1 3.8-.8 7.1-2.6 9.8-5.3 2.7-2.7 4.5-6 5.3-9.8.8-3.8.8-7.7-.1-11.5-3.1-17.6-6.8-34.9-11.2-51.5-10.7-24.5-21.5-61.5-21.5-101.5s10.7-77 21.5-101.5c4.4-16.6 8.1-33.9 11.2-51.5.8-3.8.8-7.7-.1-11.5-.8-3.8-2.6-7.1-5.3-9.8zM224.1 327.9c-57.8 0-104.9-47.1-104.9-104.9S166.3 118.1 224.1 118.1s104.9 47.1 104.9 104.9-47.1 104.9-104.9 104.9z" /></svg>
-                                <span>جروبنا على انستجرام</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 448 512" fill="currentColor"><path d="M224.1 140.2c-47.8 0-86.7 38.9-86.7 86.7s38.9 86.7 86.7 86.7 86.7-38.9 86.7-86.7-38.9-86.7-86.7-86.7zm2.5 141.7c-30.9 0-56-25.1-56-56s25.1-56 56-56 56 25.1 56 56-25.1 56-56 56zM386.4 125.7c-2.7-2.7-6-4.5-9.8-5.3-3.8-.8-7.7-.8-11.5-.1-17.6 3.1-34.9 6.8-51.5 11.2C296 90.7 259 80 219 80c-40 0-77 10.7-101.5 21.5-16.6-4.4-33.9-8.1-51.5-11.2-3.8-.7-7.7-.7-11.5.1-3.8.8-7.1 2.6-9.8 5.3-2.7 2.7-4.5 6-5.3 9.8-.8 3.8-.8 7.7.1 11.5 3.1 17.6 6.8 34.9 11.2 51.5-10.7 24.5-21.5 61.5-21.5 101.5s10.7 77 21.5 101.5c-4.4 16.6-8.1 33.9-11.2 51.5-.8 3.8-.8 7.7.1 11.5.8 3.8 2.6 7.1 5.3 9.8 2.7 2.7 6 4.5 9.8 5.3 3.8.8 7.7.8 11.5-.1 17.6-3.1 34.9-6.8 51.5-11.2 24.5 10.7 61.5 21.5 101.5 21.5s77-10.7 101.5-21.5c16.6 4.4 33.9 8.1 51.5 11.2 3.8.7 7.7.7 11.5-.1 3.8-.8 7.1-2.6 9.8-5.3 2.7-2.7 4.5-6 5.3-9.8.8-3.8.8-7.7-.1-11.5-3.1-17.6-6.8-34.9-11.2-51.5 10.7-24.5 21.5-61.5-21.5-101.5s-10.7-77-21.5-101.5c4.4-16.6 8.1-33.9 11.2-51.5.8-3.8.8-7.7-.1-11.5-.8-3.8-2.6-7.1-5.3-9.8zM417.8 349.5c.9 3.8 2.6 7.1 5.3 9.8s6 4.5 9.8 5.3c3.8.8 7.7.8 11.5-.1 17.6-3.1 34.9-6.8 51.5-11.2 24.5-10.7 61.5-21.5 101.5-21.5s77 10.7 101.5 21.5c16.6 4.4 33.9 8.1 51.5 11.2 3.8.7 7.7.7 11.5-.1 3.8-.8 7.1-2.6 9.8-5.3 2.7-2.7 4.5-6 5.3-9.8.8-3.8.8-7.7-.1-11.5-3.1-17.6-6.8-34.9-11.2-51.5-10.7-24.5-21.5-61.5-21.5-101.5s10.7-77 21.5-101.5c4.4-16.6 8.1-33.9 11.2-51.5.8-3.8.8-7.7-.1-11.5-.8-3.8-2.6-7.1-5.3-9.8zM224.1 327.9c-57.8 0-104.9-47.1-104.9-104.9S166.3 118.1 224.1 118.1s104.9 47.1 104.9 104.9-47.1 104.9-104.9 104.9z" /></svg>
+                                <span>Our Instagram Group</span>
                             </a>
                         </div>
                     </div>
@@ -333,43 +370,66 @@
             </div> </div> </div>
 
     <script>
-        // دالة بسيطة للتنقل بين الصفحات
+        // Global variables for dynamic content
+        let currentProductType = 'goods';
+        let currentProductName = '';
+        let currentProductPrice = '';
+
+        // Function to navigate between pages
         function navigateTo(pageId) {
-            // إخفاء جميع الصفحات
             document.querySelectorAll('.page-content').forEach(page => {
                 page.classList.remove('active');
             });
-            // إظهار الصفحة المطلوبة
             const targetPage = document.getElementById(pageId);
             if (targetPage) {
                 targetPage.classList.add('active');
-                // إعادة التمرير للأعلى عند تغيير الصفحة
                 window.scrollTo(0, 0);
             }
         }
 
-        // كود وظيفة البحث الجديدة
+        // Function to handle product/service details view
+        function showDetails(type, name, price) {
+            currentProductType = type;
+            currentProductName = name;
+            currentProductPrice = price;
+            
+            if (type === 'service') {
+                // If service, go directly to the contact page but update the header first
+                document.getElementById('contact-service-name').innerText = 'Service: ' + name;
+                document.getElementById('contact-service-price').innerText = 'Price: ' + price;
+                navigateTo('contact-page');
+            } else {
+                // If goods, update details page content (mocked data)
+                document.getElementById('details-name').innerText = name;
+                document.getElementById('details-price').innerText = price;
+                document.getElementById('details-image').src = `https://placehold.co/200x200/d1d5db/333333?text=${name.replace(/\s/g, '+')}`;
+                
+                const actionButton = document.getElementById('details-action-button');
+                actionButton.innerText = 'Buy Now';
+                actionButton.onclick = () => navigateTo('checkout-page');
+                actionButton.innerHTML = `Buy Now <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l-5 5m0 0l5 5m-5-5h14" /></svg>`;
+                
+                navigateTo('details-page');
+            }
+        }
+
+        // Search Functionality
         document.addEventListener('DOMContentLoaded', () => {
             const searchInput = document.getElementById('searchInput');
             const productsContainer = document.getElementById('productsContainer');
 
             if (searchInput && productsContainer) {
                 searchInput.addEventListener('input', (e) => {
-                    // تحويل النص المدخل إلى حروف صغيرة لإهمال حالة الأحرف
                     const searchTerm = e.target.value.trim().toLowerCase();
                     const productCards = productsContainer.querySelectorAll('.product-card');
 
                     productCards.forEach(card => {
-                        // جلب اسم المنتج من السمة data-name
                         const productName = card.getAttribute('data-name').toLowerCase();
                         
-                        // إظهار البطاقة إذا كان اسم المنتج يحتوي على كلمة البحث، وإلا إخفاؤها
                         if (productName.includes(searchTerm)) {
                             card.style.display = 'block'; 
-                            card.classList.remove('hidden'); // تأكد من إزالة أي كلاس إخفاء
                         } else {
-                            card.style.display = 'none'; // إخفاء البطاقة
-                            card.classList.add('hidden'); // إضافة كلاس إخفاء إضافي (اختياري)
+                            card.style.display = 'none';
                         }
                     });
                 });
